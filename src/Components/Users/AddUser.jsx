@@ -28,9 +28,9 @@ const addUserHandler = (event)=>{
     if(+enteredAge < 1){
         return;
     }
-    console.log(enteredUserName, enteredAge);
-
-    setEnteredUserName('');
+    // console.log(enteredUserName, enteredAge);
+    props.onAddUser( enteredUserName, enteredAge);// comming from App.js
+    setEnteredUserName('');// sets to update/empty input after been submitted
     setEnteredAge('');
 };
 
