@@ -16,6 +16,10 @@ const AddUser = (props) => {
     setEnteredAge(event.target.value);
   };
 
+  const errorHandler = () =>{
+      setError(null);//set to falsy value;
+  };
+
   const addUserHandler = (event) => {
     event.preventDefault();
 
@@ -44,7 +48,7 @@ const AddUser = (props) => {
 
   return (
     <div>
-      {error && <ErrorModul title={error.title} message={error.message} />}
+      {error && <ErrorModul title={error.title} message={error.message} onConfirm={errorHandler} />}
       <Card className={classes.input}>
         <form onSubmit={addUserHandler}>
           <label htmlFor="username">Username</label>
