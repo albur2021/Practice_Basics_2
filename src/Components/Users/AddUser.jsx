@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import AddButton from '../UI/AddButton';
 import Card from '../UI/Card';
 import classes from './AddUser.module.css';
 
@@ -13,7 +14,7 @@ return(
         <input id="username" type="text"/>
         <label htmlFor="age">Age (Years)</label>
         <input id="age" type="number"/>
-        <button type="submit">Add User</button>
+        <AddButton type="submit">Add User</AddButton>
     </form>
   </Card>
    
